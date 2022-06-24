@@ -1,3 +1,6 @@
+import Fighter.FantasyCharacter;
+import Fighter.Hero;
+
 public class BattleScene {
     public void fight(FantasyCharacter hero, FantasyCharacter monster, Realm.FightCallback fightCallback) {
         Runnable runnable = () -> {

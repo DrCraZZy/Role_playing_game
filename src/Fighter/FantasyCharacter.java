@@ -1,12 +1,14 @@
-abstract public class FantasyCharacter implements Fighter{
+package Fighter;
+
+abstract public class FantasyCharacter implements Fighter {
 
     private final String name;
     private int healthPoints;
-    private int strength;
-    private int dexterity;
+    private final int strength;
+    private final int dexterity;
     private int xp;
     private int gold;
-    private int healthPointsMax;
+    private final int healthPointsMax;
 
     public FantasyCharacter(String name, int healthPoints, int strength, int dexterity, int xp, int gold) {
         this.name = name;
@@ -39,28 +41,8 @@ abstract public class FantasyCharacter implements Fighter{
     }
 
     public void setHealthPoints(int healthPoints) {
-        if(healthPoints > this.healthPointsMax) {
-            this.healthPoints = this.healthPointsMax;
-        } else {
-            this.healthPoints = healthPoints;
-        }
+        this.healthPoints = Math.min(healthPoints, this.healthPointsMax);
         System.out.printf("Hey %s your woods were healed. You HP: %d\n", this.name, this.healthPoints);
-    }
-
-    public int getStrength() {
-        return strength;
-    }
-
-    public void setStrength(int strength) {
-        this.strength = strength;
-    }
-
-    public int getDexterity() {
-        return dexterity;
-    }
-
-    public void setDexterity(int dexterity) {
-        this.dexterity = dexterity;
     }
 
     public int getXp() {

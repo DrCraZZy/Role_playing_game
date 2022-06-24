@@ -1,2 +1,2 @@
-# Dragon game (Practical training. Java core completion task)
+# Fighter.Dragon game (Practical training. Java core completion task)
 

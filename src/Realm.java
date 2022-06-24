@@ -1,3 +1,4 @@
+import Fighter.*;
 import NPC.Merchant;
 
 import java.io.BufferedReader;
@@ -116,11 +117,11 @@ public class Realm {
     private static FantasyCharacter createMonster() {
         int random = (int) (Math.random() * 10);
         if (random == 0 || random == 10) {
-            return new Dragon("Dragon", 100, 20, 20, 200, 50);
+            return new Dragon("Fighter.Dragon", 100, 20, 20, 200, 50);
         } else if (random % 2 == 0) {
-            return new Goblin("Goblin", 50, 10, 10, 100, 20);
+            return new Goblin("Fighter.Goblin", 50, 10, 10, 100, 20);
         } else {
-            return new Skeleton("Skeleton", 25, 20, 20, 100, 10);
+            return new Skeleton("Fighter.Skeleton", 25, 20, 20, 100, 10);
         }
     }
 }
